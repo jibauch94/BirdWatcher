@@ -45,14 +45,14 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-            loginBtn2 = (Button) findViewById(R.id.loginBtn2);
+            loginBtn2 = findViewById(R.id.loginBtn2);
             loginBtn2.setOnClickListener(buttonClickListener);
             marginParams = (ViewGroup.MarginLayoutParams) loginBtn2.getLayoutParams();
 
-            mailText = (EditText) findViewById(R.id.editEmail1);
-            passText = (EditText) findViewById(R.id.editPassword);
+            mailText = findViewById(R.id.editEmail1);
+            passText = findViewById(R.id.editPassword);
 
-            forgotText = (TextView) findViewById(R.id.forgotPassText);
+            forgotText = findViewById(R.id.forgotPassText);
             forgotText.setOnClickListener(buttonClickListener);
 
         }

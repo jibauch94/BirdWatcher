@@ -19,7 +19,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:text="Opret Bruger" />
+        android:text="Sign Up" />
 
     <Button
         android:id="@+id/loginBtn"
