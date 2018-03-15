@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1075944182556",
+    "firebase_url": "https://birdwatcher-c8b4e.firebaseio.com",
+    "project_id": "birdwatcher-c8b4e",
+    "storage_bucket": "birdwatcher-c8b4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075944182556:android:4e7b66532d5726ce",
+        "android_client_info": {
+          "package_name": "com.example.jibba.birdwatcher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075944182556-vo4vtijgo8l2su78m3e3i7kji78kih40.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jibba.birdwatcher",
+            "certificate_hash": "9fa3bc35146bdc52e43e0aff615ab04b619b6d87"
+          }
+        },
+        {
+          "client_id": "1075944182556-3g9ks0d1k7h1t2le60afu8k7c59octq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUcaJE5pxRfQj7WiaOpo62EXqg11cE9o8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075944182556-3g9ks0d1k7h1t2le60afu8k7c59octq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

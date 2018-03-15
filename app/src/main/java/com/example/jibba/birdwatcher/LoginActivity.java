@@ -25,8 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         EditText mailText;
         EditText passText;
         TextView forgotText;
-        int height;
-        int width;
+
 
         ViewGroup.MarginLayoutParams marginParams;
 
@@ -44,8 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
             progressDialog = new ProgressDialog(this);
 
-            height = getWindowManager().getDefaultDisplay().getHeight();
-            width = getWindowManager().getDefaultDisplay().getWidth();
+
 
             loginBtn2 = (Button) findViewById(R.id.loginBtn2);
             loginBtn2.setOnClickListener(buttonClickListener);
@@ -53,9 +51,6 @@ public class LoginActivity extends AppCompatActivity {
 
             mailText = (EditText) findViewById(R.id.editEmail1);
             passText = (EditText) findViewById(R.id.editPassword);
-
-            //mailText.setOnFocusChangeListener(focusOnMail);
-            //passText.setOnFocusChangeListener(focusOnPass);
 
             forgotText = (TextView) findViewById(R.id.forgotPassText);
             forgotText.setOnClickListener(buttonClickListener);

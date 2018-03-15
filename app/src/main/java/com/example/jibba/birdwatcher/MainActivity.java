@@ -14,9 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button loginButton;
     Button registerButton;
-    int height;
-    int width;
-    String str;
+
 
 //Firebase stuff
 
@@ -31,34 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
         //firebase decleration
         firebaseAuth = FirebaseAuth.getInstance();
-        
-        mAuthListener = new FirebaseAuth.AuthStateListener()
-        {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth)
-            {
-                FirebaseUser fbUser = firebaseAuth.getCurrentUser();
-                if (fbUser != null)
-                {
-                    // toastMessage("Successfully signed in with " + fbUser.getEmail());
-                    Toast.makeText(MainActivity.this, "Du er logget ind: " + fbUser.getEmail(), Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    // Could display not signed in. But might cause toasting issues...
-                }
-            }
-        };
-
-
 
         loginButton = (Button) findViewById(R.id.loginBtn);
         registerButton = (Button) findViewById(R.id.regBtn);
 
         loginButton.setOnClickListener(buttonClickListener);
         registerButton.setOnClickListener(buttonClickListener);
-
-
 
     }
 
@@ -68,10 +44,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view)
         {
-
-            height = getWindowManager().getDefaultDisplay().getHeight();
-            width = getWindowManager().getDefaultDisplay().getWidth();
-            str = "Height: " + height + ", Width: " + width;
 
             switch(view.getId()) {
                 case R.id.loginBtn:
