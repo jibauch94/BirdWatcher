@@ -4,8 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cbecfa"
+    android:background="#000000"
     tools:context="com.example.jibba.birdwatcher.LoginActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/layout_mail_pass"
@@ -20,10 +24,12 @@
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:hint="Email Adresse"
+            android:textColorHint="@android:color/white"
             android:inputType="textEmailAddress"
             android:singleLine="true"
-            android:textColor="@android:color/black"
-            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/white"
+            android:textColorHighlight="@android:color/white"
             android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -34,11 +40,12 @@
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:hint="Adgangskode"
+            android:textColorHint="@android:color/white"
             android:inputType="textPassword"
             android:singleLine="true"
-            android:textColor="@android:color/black"
-            android:textColorHighlight="@color/colorPrimary"
-
+            android:textColor="@android:color/white"
+            android:textColorHighlight="@android:color/white"
+            android:backgroundTint="@android:color/white"
             android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -47,29 +54,30 @@
             android:id="@+id/forgotPassText"
             android:text="Glemt adgangskode?\nKlik her"
             android:textSize="15dip"
+            android:textColor="@android:color/white"
             android:textAlignment="center"
-
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-
             android:clickable="true"/>
 
 
         <Button
             android:id="@+id/loginBtn2"
             android:layout_marginTop="160dp"
-            android:layout_marginBottom="0dp"
-            android:background="#009688"
+            android:layout_marginBottom="50dp"
+            android:background="@android:color/holo_green_light"
             android:textStyle="bold"
             android:text="Log ind"
             android:textSize="40dp"
             android:textColor="@android:color/white"
             android:layout_width="match_parent"
-            android:layout_height="130dp"/>
+            android:layout_height="130dp" />
 
 
     </LinearLayout>
+
+</ScrollView>
 
 </RelativeLayout>

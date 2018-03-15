@@ -19,7 +19,8 @@
         <activity
             android:name=".LoginActivity"
             android:label="BirdWatcher" />
-        <activity android:name=".CreateUserActivity" />
+        <activity android:name=".CreateUserActivity"
+            android:label="Create new user"/>
         <activity android:name=".MyPageActivity"></activity>
     </application>
 
