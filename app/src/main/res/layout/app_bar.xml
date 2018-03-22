@@ -19,6 +19,34 @@
             android:textSize="20dp"
             android:layout_centerVertical="true"/>
 
+        <ImageButton
+            android:id="@+id/searchbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:background="#000000"
+            android:src="@drawable/searchwhite"
+            android:scaleType="centerInside"/>
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:maxWidth="290dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="-3dp"
+            android:hint=""
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:textColorHighlight="@android:color/darker_gray"
+            android:backgroundTint="@android:color/white"
+            android:editable="false"/>
+
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/helpDropDown"
             android:layout_width="30dp"
