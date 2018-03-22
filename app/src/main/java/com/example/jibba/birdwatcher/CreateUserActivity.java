@@ -113,11 +113,11 @@ public class CreateUserActivity extends AppCompatActivity implements View.OnClic
         String email = editTextEmail.getText().toString().trim();
         String name = editTextName.getText().toString().trim();
 
-        Users user = new Users(name, email);
+        Users user = new Users(email, name);
         FirebaseUser fbUser = firebaseAuth.getCurrentUser();
         String userId = fbUser.getUid();
         user.setUserId(userId);
-        databaseReference.child("Users").setValue(user);
+        databaseReference.child("Users").child(user.getName()).setValue(user);
 
     }
 

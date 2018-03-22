@@ -2,10 +2,12 @@ package com.example.jibba.birdwatcher;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.nfc.Tag;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -21,10 +23,11 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
 
 
-        Button loginBtn2;
-        EditText mailText;
-        EditText passText;
-        TextView forgotText;
+        private Button loginBtn2;
+        private EditText mailText;
+        private EditText passText;
+        private TextView forgotText;
+
 
 
         ViewGroup.MarginLayoutParams marginParams;
