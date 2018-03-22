@@ -117,7 +117,7 @@ public class CreateUserActivity extends AppCompatActivity implements View.OnClic
         FirebaseUser fbUser = firebaseAuth.getCurrentUser();
         String userId = fbUser.getUid();
         user.setUserId(userId);
-        databaseReference.child("Users").child(user.getName()).setValue(user);
+        databaseReference.child("Users").child(userId).setValue(user);
 
     }
 
