@@ -6,11 +6,18 @@
     android:orientation="vertical"
     tools:context="com.example.jibba.birdwatcher.CreateUserActivity">
 
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/app_bar">
+
+    </include>
+
     <LinearLayout
         android:layout_centerVertical="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_below="@id/action_bar">
 
         <EditText
             android:id="@+id/editTextNme"

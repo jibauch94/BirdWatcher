@@ -7,6 +7,12 @@
     android:background="#000000"
     tools:context="com.example.jibba.birdwatcher.MainActivity">
 
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/app_bar">
+
+    </include>
+
     <Button
         android:id="@+id/regBtn"
         android:background="@android:color/holo_green_light"
@@ -38,6 +44,7 @@
 
     <ImageView
         android:id="@+id/imageView2"
+        android:layout_below="@id/action_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/loginBtn"

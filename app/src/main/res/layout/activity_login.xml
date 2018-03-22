@@ -7,9 +7,16 @@
     android:background="#000000"
     tools:context="com.example.jibba.birdwatcher.LoginActivity">
 
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/app_bar">
+
+    </include>
+
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 
     <LinearLayout
         android:id="@+id/layout_mail_pass"
