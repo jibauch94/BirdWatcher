@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     tools:context="com.example.jibba.birdwatcher.MyPageActivity">
 
     <include
@@ -11,5 +12,47 @@
         layout="@layout/app_bar">
 
     </include>
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/action_bar"
+        android:layout_marginTop="120dp">
+
+        <Button
+            android:id="@+id/myObsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Mine Observationer"
+            android:background="@android:color/holo_blue_light"/>
+
+        <Button
+            android:id="@+id/allObsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Alle Observationer"
+            android:background="@android:color/holo_blue_light"/>
+
+        <Button
+            android:id="@+id/createObsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Opret Observation"
+            android:background="@android:color/holo_blue_light"/>
+
+        <Button
+            android:id="@+id/signOutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Log ud"
+            android:background="@android:color/holo_blue_light"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
