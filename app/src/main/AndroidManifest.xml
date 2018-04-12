@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,7 +25,8 @@
             android:name=".CreateUserActivity"
             android:label="Create new user" />
         <activity android:name=".MyPageActivity" />
-        <activity android:name=".BirdsCatalogActivity"></activity>
+        <activity android:name=".BirdsCatalogActivity" />
+        <activity android:name=".BirdsCatalog2Activity"></activity>
     </application>
 
 </manifest>

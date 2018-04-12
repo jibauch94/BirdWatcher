@@ -1,5 +1,6 @@
 package com.example.jibba.birdwatcher;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -43,6 +44,10 @@ public class BirdsCatalogActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Log.d(TAG, "onItemClick: " + position);
+
+                Intent birdPictureIntent = new Intent(BirdsCatalogActivity.this, BirdsCatalog2Activity.class);
+                birdPictureIntent.putExtra("bird", birdList.get(position));
+                startActivity(birdPictureIntent);
             }
         });
     }
