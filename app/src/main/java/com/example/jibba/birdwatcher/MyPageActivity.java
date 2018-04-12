@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MyPageActivity extends AppCompatActivity {
 
-    private Button myObsBtn, allObsBtn, createObsBtn, signOutBtn;
+    private Button myObsBtn, allObsBtn, createObsBtn, signOutBtn, allBirdsBtn;
 
     private FirebaseAuth firebaseAuth;
 
@@ -20,7 +20,7 @@ public class MyPageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_page);
 
-        // Fierbase declaration stuff
+        // Firebase declaration stuff
         firebaseAuth = FirebaseAuth.getInstance();
 
         myObsBtn = findViewById(R.id.myObsBtn);
@@ -28,6 +28,9 @@ public class MyPageActivity extends AppCompatActivity {
         createObsBtn = findViewById(R.id.createObsBtn);
         signOutBtn = findViewById(R.id.signOutBtn);
         signOutBtn.setOnClickListener(buttonClickListener);
+        allBirdsBtn = findViewById(R.id.allBirdsBtn);
+        allBirdsBtn.setOnClickListener(buttonClickListener);
+
     }
 
     private View.OnClickListener buttonClickListener = new View.OnClickListener() {
@@ -41,6 +44,10 @@ public class MyPageActivity extends AppCompatActivity {
                     //Intent myMenuIntent = new Intent(LoginActivity.this, PostedActivity.class);
                     //startActivity(myMenuIntent);
                     break;
+
+                case R.id.allBirdsBtn:
+                    Intent allBirdsIntent = new Intent(MyPageActivity.this, BirdsCatalogActivity.class);
+                    startActivity(allBirdsIntent);
 
             }
         }

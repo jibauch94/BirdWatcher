@@ -22,6 +22,14 @@
         android:layout_marginTop="120dp">
 
         <Button
+            android:id="@+id/allBirdsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Se registreret fugle"
+            android:background="@android:color/holo_blue_light"/>
+
+        <Button
             android:id="@+id/myObsBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
