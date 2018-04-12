@@ -4,6 +4,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -34,8 +36,16 @@ public class BirdsCatalogActivity extends AppCompatActivity {
         lv = (ListView) findViewById(R.id.list);
 
         new GetBirds().execute();
-    }
 
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Log.d(TAG, "onItemClick: " + position);
+            }
+        });
+    }
     private class GetBirds extends AsyncTask<Void, Void, Void> {
         @Override
         protected void onPreExecute() {
@@ -65,6 +75,8 @@ public class BirdsCatalogActivity extends AppCompatActivity {
                         String id = bobj.getString("Id");
                         String nameDanish = bobj.getString("NameDanish");
                         String nameEnglish = bobj.getString("NameEnglish");
+                        String created = bobj.getString("Created");
+                        String photoUrl = bobj.getString("PhotoUrl");
 
 
                         // tmp hash map for single bird
@@ -74,6 +86,8 @@ public class BirdsCatalogActivity extends AppCompatActivity {
                         bird.put("Id", id);
                         bird.put("NameDanish", nameDanish);
                         bird.put("NameEnglish", nameEnglish);
+                        bird.put("Created", created);
+                        bird.put("PhotoUrl", photoUrl);
 
 
                         // adding bird to bird list
@@ -107,6 +121,8 @@ public class BirdsCatalogActivity extends AppCompatActivity {
 
             return null;
         }
+
+
 
         @Override
         protected void onPostExecute(Void result) {
