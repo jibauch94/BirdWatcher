@@ -23,20 +23,20 @@ public class BirdsCatalogActivity extends AppCompatActivity {
     private String TAG = MainActivity.class.getSimpleName();
     private ListView lv;
 
-    ArrayList<HashMap<String, String>> contactList;
+    ArrayList<HashMap<String, String>> birdList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_birds_catalog);
 
-        contactList = new ArrayList<>();
+        birdList = new ArrayList<>();
         lv = (ListView) findViewById(R.id.list);
 
-        new GetContacts().execute();
+        new GetBirds().execute();
     }
 
-    private class GetContacts extends AsyncTask<Void, Void, Void> {
+    private class GetBirds extends AsyncTask<Void, Void, Void> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -61,24 +61,24 @@ public class BirdsCatalogActivity extends AppCompatActivity {
 
                     // looping through All Contacts
                     for (int i = 0; i < birds.length(); i++) {
-                        JSONObject c = birds.getJSONObject(i);
-                        String id = c.getString("Id");
-                        String nameDanish = c.getString("NameDanish");
-                        String nameEnglish = c.getString("NameEnglish");
+                        JSONObject bobj = birds.getJSONObject(i);
+                        String id = bobj.getString("Id");
+                        String nameDanish = bobj.getString("NameDanish");
+                        String nameEnglish = bobj.getString("NameEnglish");
 
 
-                        // tmp hash map for single contact
-                        HashMap<String, String> contact = new HashMap<>();
+                        // tmp hash map for single bird
+                        HashMap<String, String> bird = new HashMap<>();
 
                         // adding each child node to HashMap key => value
-                        contact.put("Id", id);
-                        contact.put("NameDanish", nameDanish);
-                        contact.put("NameEnglish", nameEnglish);
+                        bird.put("Id", id);
+                        bird.put("NameDanish", nameDanish);
+                        bird.put("NameEnglish", nameEnglish);
 
 
-                        // adding contact to contact list
-                        contactList.add(contact);
-                        Log.d(TAG, "doInBackground: " + contact);
+                        // adding bird to bird list
+                        birdList.add(bird);
+                        Log.d(TAG, "doInBackground: " + bird);
                     }
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
@@ -111,7 +111,7 @@ public class BirdsCatalogActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            ListAdapter adapter = new SimpleAdapter(BirdsCatalogActivity.this, contactList,
+            ListAdapter adapter = new SimpleAdapter(BirdsCatalogActivity.this, birdList,
                     R.layout.list_item, new String[]{ "Id","NameDanish", "NameEnglish"},
                     new int[]{R.id.id, R.id.nameDanish, R.id.nameEnglish});
             lv.setAdapter(adapter);
