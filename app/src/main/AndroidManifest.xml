@@ -26,7 +26,8 @@
             android:label="Create new user" />
         <activity android:name=".MyPageActivity" />
         <activity android:name=".BirdsCatalogActivity" />
-        <activity android:name=".BirdsCatalog2Activity"></activity>
+        <activity android:name=".BirdsCatalog2Activity" />
+        <activity android:name=".CreateObsActivity"></activity>
     </application>
 
 </manifest>

@@ -24,6 +24,7 @@ public class MyPageActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         myObsBtn = findViewById(R.id.myObsBtn);
+        myObsBtn.setOnClickListener(buttonClickListener);
         allObsBtn = findViewById(R.id.allObsBtn);
         createObsBtn = findViewById(R.id.createObsBtn);
         signOutBtn = findViewById(R.id.signOutBtn);
@@ -44,6 +45,10 @@ public class MyPageActivity extends AppCompatActivity {
                     //Intent myMenuIntent = new Intent(LoginActivity.this, PostedActivity.class);
                     //startActivity(myMenuIntent);
                     break;
+
+                case R.id.myObsBtn:
+                    Intent myObsIntent = new Intent(MyPageActivity.this, CreateObsActivity.class);
+                    startActivity(myObsIntent);
 
                 case R.id.allBirdsBtn:
                     Intent allBirdsIntent = new Intent(MyPageActivity.this, BirdsCatalogActivity.class);
