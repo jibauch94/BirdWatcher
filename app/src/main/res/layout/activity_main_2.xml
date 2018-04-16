@@ -15,7 +15,7 @@
 
     <Button
         android:id="@+id/regBtn"
-        android:background="@android:color/holo_green_light"
+        android:background="@android:color/holo_blue_light"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
 
     <Button
         android:id="@+id/loginBtn"
-        android:background="@android:color/holo_green_light"
+        android:background="@android:color/holo_blue_light"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:layout_width="wrap_content"
