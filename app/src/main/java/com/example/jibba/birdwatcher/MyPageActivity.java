@@ -41,7 +41,7 @@ public class MyPageActivity extends AppCompatActivity {
             switch (view.getId()) {
                 case R.id.signOutBtn:
                     signOut();
-                    //Toast.makeText(LoginActivity.this, "You are trying to Login...", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MyPageActivity.this, "You are logged out...", Toast.LENGTH_SHORT).show();
                     //Intent myMenuIntent = new Intent(LoginActivity.this, PostedActivity.class);
                     //startActivity(myMenuIntent);
                     break;
@@ -60,7 +60,7 @@ public class MyPageActivity extends AppCompatActivity {
 
     private void signOut(){
         firebaseAuth.signOut();
-        Intent signoutIntent = new Intent(MyPageActivity.this, MainActivity.class);
+        Intent signoutIntent = new Intent(MyPageActivity.this, MainActivity2.class);
         startActivity(signoutIntent);
 
     }
