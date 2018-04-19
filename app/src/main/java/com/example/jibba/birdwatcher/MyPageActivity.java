@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -27,6 +26,7 @@ public class MyPageActivity extends AppCompatActivity {
         myObsBtn.setOnClickListener(buttonClickListener);
         allObsBtn = findViewById(R.id.allObsBtn);
         createObsBtn = findViewById(R.id.createObsBtn);
+        createObsBtn.setOnClickListener(buttonClickListener);
         signOutBtn = findViewById(R.id.signOutBtn);
         signOutBtn.setOnClickListener(buttonClickListener);
         allBirdsBtn = findViewById(R.id.allBirdsBtn);
@@ -42,13 +42,12 @@ public class MyPageActivity extends AppCompatActivity {
                 case R.id.signOutBtn:
                     signOut();
                     //Toast.makeText(MyPageActivity.this, "You are logged out...", Toast.LENGTH_SHORT).show();
-                    //Intent myMenuIntent = new Intent(LoginActivity.this, PostedActivity.class);
-                    //startActivity(myMenuIntent);
                     break;
 
-                case R.id.myObsBtn:
-                    Intent myObsIntent = new Intent(MyPageActivity.this, CreateObsActivity.class);
-                    startActivity(myObsIntent);
+                case R.id.createObsBtn:
+                    Intent createObsIntent = new Intent(MyPageActivity.this, BirdsCatalogCreateActivity.class);
+                    startActivity(createObsIntent);
+                    break;
 
                 case R.id.allBirdsBtn:
                     Intent allBirdsIntent = new Intent(MyPageActivity.this, BirdsCatalogActivity.class);
