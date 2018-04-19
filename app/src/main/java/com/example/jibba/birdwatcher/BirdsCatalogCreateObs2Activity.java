@@ -21,6 +21,7 @@ public class BirdsCatalogCreateObs2Activity extends AppCompatActivity {
     private String name;
     private String created;
     private Button makeObsBtn;
+    private HashMap<String, String> hashMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class BirdsCatalogCreateObs2Activity extends AppCompatActivity {
         makeObsBtn.setOnClickListener(buttonClickListener);
 
         Intent intent = getIntent();
-        HashMap<String, String> hashMap = (HashMap<String, String>)intent.getSerializableExtra("bird");
+        hashMap = (HashMap<String, String>)intent.getSerializableExtra("bird");
         Log.v("HashMapTest", hashMap.get("PhotoUrl"));
         url = hashMap.get("PhotoUrl");
         name = hashMap.get("NameDanish");
@@ -53,6 +54,7 @@ public class BirdsCatalogCreateObs2Activity extends AppCompatActivity {
             switch (view.getId()) {
                 case R.id.makeObsBtn:
                     Intent makeObsIntent = new Intent(BirdsCatalogCreateObs2Activity.this, CreateObsActivity.class);
+                    makeObsIntent.putExtra("info", hashMap);
                     startActivity(makeObsIntent);
 
             }

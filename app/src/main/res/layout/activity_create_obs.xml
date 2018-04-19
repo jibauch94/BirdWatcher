@@ -13,5 +13,60 @@
 
     </include>
 
+    <EditText
+        android:id="@+id/danishName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/action_bar"
+        android:hint="Dansk Navn"
+        android:textColorHint="@android:color/holo_blue_light"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <EditText
+        android:id="@+id/englishName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/danishName"
+        android:hint="Engelsk Navn"
+        android:textColorHint="@android:color/holo_blue_light"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <EditText
+        android:id="@+id/longitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/englishName"
+        android:hint="Longitude"
+        android:textColorHint="@android:color/holo_blue_light"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <EditText
+        android:id="@+id/latitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/longitude"
+        android:hint="Latitude"
+        android:textColorHint="@android:color/holo_blue_light"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/latitude"
+        android:hint="Dato"
+        android:textColor="@android:color/holo_blue_light"
+        android:textColorHint="@android:color/holo_blue_light" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/holo_blue_light"
+        android:text="Tilføj Observation"
+        android:textColor="@android:color/black" />
 
 </RelativeLayout>
